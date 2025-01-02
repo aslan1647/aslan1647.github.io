@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Header */
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+}
+header h1 {
+    margin: 4;
+    font-size: 2rem;
+    color: #f39c12;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap; /* Taşma durumunda satırı aşağı alır */
+}
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 15px;
+    background-color: #f39c12;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+nav ul li a:hover {
+    background-color: #e67e22;
+}
+
+/* Main */
+main {
+    padding: 20px;
+    text-align: center;
+}
+main h2 {
+    color: #f39c12;
+}
+
+/* Table */
+table {
+    width: 100%; /* Küçük ekranlarda taşmayı engellemek için %100 genişlik */
+    max-width: 70%; /* Masaüstü için %70 genişlik sınırı */
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #1e1e1e;
+}
+table th, table td {
+    border: 1px solid #f39c12;
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word; /* Metin taşmasını önler */
+}
+table th {
+    background-color: #f39c12;
+    color: #121212;
+}
+
+/* Images */
+img {
+    max-width: 100%; /* Resmin genişliği kapsayıcının genişliğini aşmaz */
+    height: auto;    /* Oranını koruyarak yüksekliği ayarlar */
+    display: block;  /* Taşmayı önlemek için blok öğe yap */
+    margin: 0 auto;  /* Resimleri ortalamak için */
+}
+
+/* Footer */
+footer {
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    margin: 0;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem; /* Başlığı daha küçük yap */
+    }
+
+    nav ul {
+        flex-direction: column; /* Menü elemanlarını dikey sırala */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Menü elemanları arası boşluk */
+    }
+
+    table {
+        max-width: 100%; /* Mobilde tam genişlik kullan */
+        font-size: 0.9rem; /* Daha küçük metin */
+    }
+
+    footer {
+        position: static; /* Küçük ekranlarda sabit footer yerine akışta bırak */
+        padding: 15px;
+    }
+}
