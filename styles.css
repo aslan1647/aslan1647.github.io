@@ -1,0 +1,118 @@
+/* Genel Stil */
+body {
+    font-family: Arial, sans-serif; /* Yazı tipi */
+    margin: 0; /* Sayfa kenar boşluğu sıfırlanır */
+    padding: 0; /* Sayfa içi boşluk sıfırlanır */
+    background-color: #121212; /* Arka plan rengi */
+    color: #ffffff; /* Metin rengi */
+}
+
+/* Header - Başlık kısmı */
+header {
+    background-color: #1e1e1e; /* Arka plan rengi */
+    padding: 20px; /* İç boşluk */
+    text-align: center; /* Başlık merkezlenir */
+}
+header h1 {
+    margin: 4; /* Margin sıfırlanır */
+    font-size: 2rem; /* Başlık boyutu */
+    color: #f39c12; /* Başlık rengi */
+}
+
+/* Navigasyon - Menü kısmı */
+nav ul {
+    list-style-type: none; /* Liste stilini kaldır */
+    margin: 0; /* Dış boşluk sıfırlanır */
+    padding: 0; /* İç boşluk sıfırlanır */
+    display: flex; /* Yatay düzen */
+    justify-content: center; /* Menü elemanlarını ortala */
+    gap: 25px; /* Menü elemanları arasındaki boşluk */
+    flex-wrap: wrap; /* Taşma durumunda satırı aşağı alır */
+}
+nav ul li a {
+    text-decoration: none; /* Alt çizgi kaldırılır */
+    color: #ffffff; /* Metin rengi */
+    padding: 10px 15px; /* İç boşluk */
+    background-color: #f39c12; /* Arka plan rengi */
+    border-radius: 20px; /* Yuvarlatılmış köşeler */
+    transition: background-color 0.3s; /* Hover efekti için geçiş süresi */
+}
+nav ul li a:hover {
+    background-color: #e67e22; /* Hover rengi */
+}
+
+/* Main - Ana içerik kısmı */
+main {
+    padding: 20px; /* İç boşluk */
+    text-align: center; /* İçerik ortalanır */
+}
+main h2 {
+    color: #f39c12; /* Başlık rengi */
+}
+
+/* Table - Tablo kısmı */
+table {
+    width: 100%; /* Küçük ekranlarda taşmayı engellemek için %100 genişlik */
+    max-width: 70%; /* Masaüstü için %70 genişlik sınırı */
+    margin: 20px auto; /* Tabloyu ortalar */
+    border-collapse: collapse; /* Tablo sınırları birleşir */
+    background-color: #1e1e1e; /* Arka plan rengi */
+}
+table th, table td {
+    border: 1px solid #f39c12; /* Hücre sınırları */
+    padding: 10px; /* İç boşluk */
+    text-align: center; /* Metin hizalaması */
+    word-wrap: break-word; /* Metin taşmasını önler */
+}
+table th {
+    background-color: #f39c12; /* Başlık hücresinin arka plan rengi */
+    color: #121212; /* Başlık hücresinin metin rengi */
+}
+
+/* Görseller */
+img {
+    max-width: 100%; /* Resmin genişliği kapsayıcının genişliğini aşmaz */
+    height: auto;    /* Oranını koruyarak yüksekliği ayarlar */
+    display: block;  /* Taşmayı önlemek için blok öğe yap */
+    margin: 0 auto;  /* Resimleri ortalamak için */
+}
+
+/* Footer - Alt bilgi kısmı */
+footer {
+    background-color: #1e1e1e; /* Arka plan rengi */
+    text-align: center; /* İçerik ortalanır */
+    padding: 10px; /* İç boşluk */
+    position: fixed; /* Sabit konumda footer */
+    bottom: 0; /* Sayfanın altına sabitlenir */
+    width: 100%; /* Footer genişliği sayfanın genişliğine eşit olur */
+}
+footer p {
+    margin: 0; /* Margin sıfırlanır */
+    color: #ffffff; /* Metin rengi */
+}
+
+/* Responsive Design - Mobil uyumlu tasarım */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem; /* Başlığı daha küçük yap */
+    }
+
+    nav ul {
+        flex-direction: column; /* Menü elemanlarını dikey sırala */
+        align-items: center; /* Menü elemanlarını ortala */
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Menü elemanları arası boşluk */
+    }
+
+    table {
+        max-width: 100%; /* Mobilde tam genişlik kullan */
+        font-size: 0.9rem; /* Daha küçük metin */
+    }
+
+    footer {
+        position: static; /* Küçük ekranlarda sabit footer yerine akışta bırak */
+        padding: 15px; /* İç boşluk artırılır */
+    }
+}
